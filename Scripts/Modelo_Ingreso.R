@@ -154,14 +154,6 @@ Vivienda1 $Vivienda <- factor (Vivienda1$Vivienda, levels=c("0", "1"), labels = 
 colnames(Vivienda1) <- c("Vivienda","Promedio del ingreso")
 export(Vivienda1, "Vivienda.xlsx")
 
-#Senda de ingreso por escolaridad 
-
-incomestudies = aggregate(ingtot ~ Educ, data = db, FUN = mean)
-incomestudies $Educ <- factor (incomestudies$Educ, levels=c("1", "2", "3", "4", "5", "6"), 
-                               labels = c("Ninguno", "Pre-escolar", "Primaria", "Secundaria", "Media", "Universitario/Superior"))
-colnames(incomestudies) <- c("Grado de escolaridad","Promedio del ingreso")
-
-
 
 #######----------Modelo 1: regresión lineal múltiple----------####### 
 
@@ -254,7 +246,7 @@ mejor.lambda_min
 log(mejor.lambda_min)
 
 
-#Predecir valores de y con el mejor lamda 
+#Predecir valores de Y con el mejor lamda 
 
 y_predict_ridge <- predict(ridge.model, s=mejor.lambda_min, newx = X_Test)
 length(y_predict_ridge)
@@ -299,7 +291,7 @@ mejor.lambda_min_lasso
 log(mejor.lambda_min_lasso)
 
 
-#Predecir valores de y con el mejor lamda
+#Predecir valores de Y con el mejor lamda
 
 y_predict_lasso <- predict(lasso.model, s=mejor.lambda_min_lasso, newx = X_Test)
 length(y_predict_lasso)
@@ -348,7 +340,7 @@ mejor.lambda_min_Enet
 log(mejor.lambda_min_Enet)
 
 
-#Predecir valores de y con el mejor lamda 
+#Predecir valores de Y con el mejor lamda 
 
 y_predict_Enet <- predict(Enet.model, s=mejor.lambda_min_Enet, newx = X_Test)
 length(y_predict_Enet)
@@ -418,7 +410,7 @@ pred
 
 Test$pred<- pred 
 
-#######----------Cñasificación de pobreza---------#######
+#######----------Clasificación de pobreza---------#######
 
 IngHogar <- Test %>%
   group_by(id) %>%
