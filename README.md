@@ -5,4 +5,4 @@ La medición de la pobreza es una de las tareas más arduas que hoy tienen inves
 
 Este estudio es una aproximación a la medición de la pobreza modetaria a partir de información de la GEIH 2018. Vale la pena recordar que la pobreza por ingresos se define al comparar los ingresos de las personas con el valor monetario que representa una canasta básica, por lo general, de alimentos. Todos los que esten por debajo de ese umbral mínimo se consideran pobres. En el presente documento se realizó un ejericio de predicción de la pobreza por hogar por dos vías: a partir del ingreso que genera los individuos de una unidad de gasto y a través de un modelo de clasificación. El objetivo es plantear dos modelos de preddición de pobreza que puedan ser útiles en muestras con información escasa y de baja calidad. Este estudio sienta las bases para aproximarse al fénomeno de la pobreza en escenarios donde se cuenta con poca información o con una baja capacidad para levantarla. 
 
-En este docuemnto participaron los investigadores Camila Ciurlo Aragón y Paolo Valcarcel Pineda. 
+En este documento participaron los investigadores Camila Ciurlo Aragón y Paolo Valcarcel Pineda. 
