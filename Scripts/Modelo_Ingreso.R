@@ -415,7 +415,8 @@ IngHogar
 
 IngHogar$pobre<- ifelse(IngHogar$Ingreso/IngHogar$personas<IngHogar$Lp,1,0)
 
-table(IngHogar$pobre) 
+table(IngHogar$pobre)
+export(IngHogar, "Pobreza.Rds")
 export(IngHogar, "Pobre_modelo_lasso.xlsx")
 
 #############################################################
