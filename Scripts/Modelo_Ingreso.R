@@ -64,7 +64,7 @@ TF <- as.data.frame(left_join(x=TP , y=TH, by=c("id")))#Test personas y Test hog
 
 #######----------Subset bases de dato----------####### 
 
-#Se trabaj con las variables comunes en Train y Test que puedan explicar pobreza 
+#Se trabaja con las variables comunes en Train y Test que puedan explicar pobreza 
 
 Train<-TRF [ , c("id","Dominio.x","P6020","Ingpcug", "Ingtotugarr", "Lp",  
                  "Npersug","P6210","P6040","P6050","P6210s1", "P5090","P5000")] #Subset Train
@@ -100,7 +100,7 @@ Test$Esc[is.na(Test$Esc)] = 0
 Test$Ingpcug <-0
 Test$Ingtotugarr <- 0
 
-#Edad, edad2, jefe, Sexo, vivienda 
+#Edad, edad2, jefe, Sexo, vivienda, habitaciones 
 
 Train$Edad <- Train$P6040
 Train$Edad2 <- Train$P6040^2
